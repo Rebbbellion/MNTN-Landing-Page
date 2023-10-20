@@ -10,6 +10,12 @@
 *:focus-visible {
    outline: 3px solid black;
 }
+* {
+   scrollbar-width: none;
+}
+::-webkit-scrollbar {
+   width: 0;
+}
 body {
    font-family: 'Times New Roman';
    font-size: 1rem;
@@ -67,10 +73,13 @@ body {
       min-height: 100vh;
       padding-bottom: 78.802083%; /* 1513/1920 */
       background: url('img/background/clouds.webp') center/cover;
+      transform-origin: left center;
+      transform: scale(3);
+      animation: moveClouds 60s linear 1 forwards;
    }
    // .background__mountains
    &__mountains {
-		position: absolute;
+      position: absolute;
       top: 38.666667vh; /* 464/1200 */
       left: 0;
       width: 100%;
@@ -80,31 +89,41 @@ body {
    }
    // .background__grass
    &__grass {
-		position: absolute;
+      position: absolute;
       top: 64vh; /* 768/1200 */
       left: 0;
       width: 100%;
       min-height: 100vh;
       padding-bottom: 48.229167%; /* 926/1920 */
-      background: url('img/background/grass.webp') 25% 0/cover;
+      background: url('img/background/grass.webp') 25% 0 / cover;
    }
    // .background__bottom-shadow
    &__bottom-shadow {
-		position: absolute;
+      position: absolute;
       top: 100vh;
       left: 0;
       width: 100%;
-		min-height: 100vh;
+      min-height: 100vh;
       padding-bottom: 36.458333%; /* 700/1920 */
-      background: linear-gradient(180.00deg, rgba(11, 29, 38, 0),rgb(11, 29, 38) 61.384%);
+      background: linear-gradient(
+         180deg,
+         rgba(11, 29, 38, 0),
+         rgb(11, 29, 38) 61.384%
+      );
    }
    // .background__prim-clr
    &__prim-clr {
-		position: absolute;
-		top: 190vh;
-		left: 0;
-		width: 100%;
-		min-height: 100%;
-		background: rgb(11, 29, 38);
+      position: absolute;
+      top: 190vh;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      background: rgb(11, 29, 38);
+   }
+}
+
+@keyframes moveClouds {
+   to {
+      transform: scale(1);
    }
 }
