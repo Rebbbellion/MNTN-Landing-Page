@@ -1,0 +1,52 @@
+.header {
+   // .header__container
+   &__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 12.75vh;
+   }
+   // .header__logo
+   &__logo {
+      font-family: 'Chronicle Display';
+      font-size: 2rem;
+		line-height: 78.125%; /* 25/32 */
+      font-weight: 700;
+      text-transform: capitalize;
+		letter-spacing: 0.3px;
+   }
+}
+.navigation {
+	display: flex;
+	flex-grow: 1;
+   // .navigation__body
+   &__body {
+		flex-grow: 1;
+   }
+   // .navigation__list
+   &__list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 40px;
+		row-gap: 15px;
+		padding-right: 18px;
+		padding-left: 9px;
+   }
+   // .navigation__auth
+   &__auth {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+   }
+	// .navigation__icon
+	&__icon{
+		width: 20px;
+		height: 20px;
+		fill: white;
+		fill-rule: evenodd;
+	}
+}
+.burger {
+	display: none;
+}
