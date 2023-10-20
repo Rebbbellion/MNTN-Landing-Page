@@ -43,8 +43,7 @@ body {
    flex-grow: 1;
 }
 [class*='__container'] {
-   max-width: 1280px;
-   padding: 0px 15px;
+   max-width: 91.666667%; /* 1760/1920 */
    margin: 0px auto;
 }
 //------------------Background---------------------
@@ -67,6 +66,7 @@ body {
          rgba(11, 29, 38, 0) 31.055%,
          rgb(11, 29, 38) 108.93%
       );
+		z-index: 1;
    }
    // .background__clouds
    &__clouds {
