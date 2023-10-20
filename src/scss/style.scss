@@ -72,7 +72,7 @@ body {
       width: 100%;
       min-height: 100vh;
       padding-bottom: 78.802083%; /* 1513/1920 */
-      background: url('img/background/clouds.webp') center/cover;
+      background: url('../img/background/clouds.webp') center/cover;
       transform-origin: left center;
       transform: scale(3);
       animation: moveClouds 60s linear 1 forwards;
@@ -85,7 +85,7 @@ body {
       width: 100%;
       min-height: 100vh;
       padding-bottom: 74.0625%; /* 1422/1920 */
-      background: url('img/background/mountains.webp') center/cover;
+      background: url('../img/background/mountains.webp') center/cover;
    }
    // .background__grass
    &__grass {
@@ -95,7 +95,7 @@ body {
       width: 100%;
       min-height: 100vh;
       padding-bottom: 48.229167%; /* 926/1920 */
-      background: url('img/background/grass.webp') 25% 0 / cover;
+      background: url('../img/background/grass.webp') 25% 0 / cover;
    }
    // .background__bottom-shadow
    &__bottom-shadow {
