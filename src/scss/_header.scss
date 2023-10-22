@@ -37,8 +37,8 @@
          overflow: auto;
          padding-top: 16vh;
          padding-left: 40px;
-			transition: all 0.3s;
-			.menu-open & {
+         transition: left 0.3s;
+         .menu-open & {
             left: 0;
          }
          &::before {
@@ -50,6 +50,7 @@
             height: clamp(40px, 12.75vh, 12.75vh);
             background: rgba(0, 0, 0, 0.553);
             filter: blur(20px);
+            transition: left 0.3s;
             z-index: 5;
             .menu-open & {
                left: 0;
@@ -104,7 +105,6 @@
          height: 2px;
          border-radius: 12px;
          position: absolute;
-         transition: all 0.3s;
       }
       &::before {
          width: 26%;
@@ -112,23 +112,27 @@
          top: 2px;
          left: 78%;
          transform: rotate(45deg) translateY(50%);
+         transition: width 0.3s;
       }
       &__connector {
          width: 115%;
          top: 50%;
          transform: translateY(-50%) rotate(-45deg);
          left: -16%;
+         transition: all 0.3s;
       }
       &__middle-line {
          top: 50%;
          transform: translateY(-50%);
          left: 40%;
          width: 60%;
+         transition: width 0.3s;
       }
       &::after {
          width: 100%;
          bottom: 0;
          left: 0;
+         transition: all 0.3s;
       }
       &[aria-pressed='true'] {
          &::before {

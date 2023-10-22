@@ -1,9 +1,17 @@
 //Burger
-const menuMediaQuery = matchMedia('(max-width:61.9988em)');
 const menuButton = document.querySelector('.burger');
 const navigationBody = document.querySelector('.navigation__body');
 const mainElem = document.querySelector('main');
 const footerElem = document.querySelector('footer');
+const menuMediaQuery = matchMedia('(max-width:61.9988em)');
+
+function navigationMove() {
+   if (menuMediaQuery.matches) {
+      navigationBody.parentElement.append(navigationBody);
+   } else {
+      navigationBody.parentElement.prepend(navigationBody);
+   }
+}
 
 function menuInertToggle() {
    if (menuMediaQuery.matches) {
@@ -25,17 +33,8 @@ function menuInertToggle() {
       menuButton.setAttribute('aria-pressed', false);
    }
 }
-function navigationMove() {
-   if (menuMediaQuery.matches) {
-      navigationBody.parentElement.append(navigationBody);
-   } else {
-      navigationBody.parentElement.prepend(navigationBody);
-   }
-}
 
-menuMediaQuery.addEventListener('change', () => {
-   navigationMove();
-   menuInertToggle();
-});
+navigationMove();
+menuInertToggle();
 
-export { menuInertToggle, menuMediaQuery };
+export { menuInertToggle, menuMediaQuery,navigationMove };
