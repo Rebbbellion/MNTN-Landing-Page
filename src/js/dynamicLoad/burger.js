@@ -1,7 +1,5 @@
 import { bodyLockToggle } from './bodyLock';
-import { menuInertToggle } from '../initialLoad/a11y';
-
-const menuMediaQuery = matchMedia('(max-width:48em)');
+import { menuInertToggle, menuMediaQuery } from '../initialLoad/a11y';
 
 function menuToggle() {
    bodyLockToggle();
