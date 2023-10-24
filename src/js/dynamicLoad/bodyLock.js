@@ -51,4 +51,4 @@ function bodyUnlock(delay = 500) {
    }
 }
 
-export { bodyLockToggle, bodyLock, bodyUnlock };
+export { bodyLockToggle};

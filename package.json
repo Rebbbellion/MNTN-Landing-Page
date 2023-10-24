@@ -7,7 +7,7 @@
       "dev": "vite --host",
       "build": "vite build",
       "preview": "vite preview --host",
-      "sprite": " svgo --config ./svgo-cfg.cjs -f ./src/svgicons -o ./src/svgiconsmin && svg-symbol-sprite -i ./src/svgiconsmin -o ./public/img/icons/sprite.svg -c false",
+      "sprite": " svgo --config ./svgo-cfg.cjs -f ./src/svgicons -o ./src/svgiconsmin && svg-symbol-sprite -i ./src/svgiconsmin -o ./public/icons/sprite.svg -c false -p \"\"",
       "webp": "go-webp remove=true change=true excludeFolders=\"icons\""
    },
    "devDependencies": {
