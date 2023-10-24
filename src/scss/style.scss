@@ -1,9 +1,6 @@
-//-------------------Reset and import styles--------------------
+//-------------------Reset and mixins-------------------
 @import 'mixins.scss';
 @import 'reset.scss';
-@import 'header.scss';
-
-@import 'footer.scss';
 //-------------------Fonts--------------------
 @include font('Gilroy', 'Gilroy-Medium', 500, normal);
 @include font('Gilroy', 'Gilroy-Bold', 700, normal);
@@ -132,3 +129,8 @@ body {
       transform: scale(1);
    }
 }
+//----------------Import Styles----------------------
+
+@import 'header.scss';
+@import './page/start-section';
+@import 'footer.scss';
